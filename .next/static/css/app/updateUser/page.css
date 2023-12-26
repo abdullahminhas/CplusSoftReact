@@ -1,0 +1,103 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/page.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.page_loginWrapper__4sTLK {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.page_formControl__Wu5iy {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  flex: 1 0;
+  border-radius: 0.25rem;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  padding: 0.75rem;
+  column-gap: 0.75rem;
+}
+
+.page_formControlDanger__rTXkZ {
+  border: 1px solid #f54b55;
+  box-shadow: 0px 0px 0px 1px rgba(245, 75, 85, 0.2);
+}
+
+.page_formControl__Wu5iy input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+
+.page_formControl__Wu5iy input::placeholder {
+  color: #6b7280;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.page_formControlDanger__rTXkZ input::placeholder {
+  color: #f54b55;
+}
+
+.page_formControl__Wu5iy:focus-within {
+  border: 1px solid #3c71f8;
+  box-shadow: 0px 0px 0px 1px rgba(60, 113, 248, 0.2);
+}
+
+.page_secondarySocialBtn__glRKE {
+  display: flex;
+  height: 3rem;
+  padding: 0.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  color: white;
+  background: rgb(13, 110, 253);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.page_dangerSocialBtn__QhzKR {
+  display: flex;
+  height: 3rem;
+  padding: 0.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  color: white;
+  background: #dc3545;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -0.25rem;
+}
+
+.page_textBody1__CII4F {
+  color: #6b7280;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+  margin-bottom: 0rem;
+}
+
+.page_textSubtitle2__A8C5V {
+  color: #111827;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.375rem; /* 157.143% */
+  margin-bottom: 0rem;
+  text-decoration: none;
+  margin-left: 0.35rem;
+}
+
+@media screen and (max-width: 768px) {
+  .page_loginWrapper__4sTLK {
+    min-height: 100%;
+  }
+}
+

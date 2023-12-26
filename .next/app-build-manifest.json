@@ -1,0 +1,28 @@
+{
+  "pages": {
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/loginUser/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/loginUser/page.css",
+      "static/chunks/app/loginUser/page.js"
+    ],
+    "/userAccount/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/userAccount/page.css",
+      "static/chunks/app/userAccount/page.js"
+    ],
+    "/updateUser/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/updateUser/page.css",
+      "static/chunks/app/updateUser/page.js"
+    ]
+  }
+}

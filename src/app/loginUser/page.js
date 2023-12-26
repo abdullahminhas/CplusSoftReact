@@ -9,7 +9,7 @@ import { AppContext } from "@/context/appContext";
 
 const loginUser = () => {
   const router = useRouter();
-  const { setUserName } = useContext(AppContext);
+  const { setUserName, setShowError } = useContext(AppContext);
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -24,30 +24,38 @@ const loginUser = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const tempData = {
-      email: emailRef.current.value,
-      password: passwordRef.current.value,
-    };
+    const isEmailEmpty = emailRef.current.value.trim() === "";
+    const isPasswordEmpty = passwordRef.current.value.trim() === "";
 
-    const response = await fetch("http://localhost:5000/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(tempData),
-    });
-    if (response.ok) {
-      const data = await response.json();
-      const token = data.token;
-      localStorage.setItem("auth-token", token);
-      setUserName(data.user);
-      router.push("/userAccount");
-      console.log("authenticated", data);
+    if (isEmailEmpty || isPasswordEmpty) {
+      console.error("in error");
+      setShowError(true);
     } else {
-      console.error("Error logging in");
-    }
+      const tempData = {
+        email: emailRef.current.value,
+        password: passwordRef.current.value,
+      };
 
-    console.log(tempData);
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(tempData),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        const token = data.token;
+        localStorage.setItem("auth-token", token);
+        setUserName(data.user);
+        router.push("/userAccount");
+        console.log("authenticated", data);
+      } else {
+        console.error("Error logging in");
+      }
+
+      console.log(tempData);
+    }
   };
 
   return (

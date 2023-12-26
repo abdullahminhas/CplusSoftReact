@@ -5,13 +5,15 @@ export const AppContext = createContext();
 
 export const MyProvider = ({ children }) => {
   const [userName, setUserName] = useState({});
+  const [showError, setShowError] = useState(false);
 
   useEffect(() => {
     console.log(userName);
   }, [userName]);
 
   useEffect(() => {
-    if (!userName.length) {
+    const token = localStorage.getItem("auth-token");
+    if (!userName.length || !token) {
       const token = localStorage.getItem("auth-token");
 
       fetch(`http://localhost:5000/user/me`, {
@@ -35,6 +37,8 @@ export const MyProvider = ({ children }) => {
       value={{
         userName,
         setUserName,
+        showError,
+        setShowError,
       }}
     >
       {children}

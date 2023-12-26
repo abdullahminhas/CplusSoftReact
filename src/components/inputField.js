@@ -1,14 +1,22 @@
 "use Client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import style from "@/styles/page.module.css";
+import { AppContext } from "@/context/appContext";
 
 const inputField = ({ type, placeholder, inputRef, defaultValue }) => {
+  const { showError } = useContext(AppContext);
   const [showPassword, setShowPassword] = useState(false);
   const value = defaultValue ? defaultValue : "";
 
   return (
-    <div className={style.formControl}>
+    <div
+      className={
+        showError
+          ? `${style.formControl} ${style.formControlDanger}`
+          : style.formControl
+      }
+    >
       {type === "email" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
