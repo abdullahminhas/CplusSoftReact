@@ -1,0 +1,10 @@
+.flexBehaviour {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.editBtn {
+  cursor: pointer;
+}
